@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      <ion-title size="large">Media Saver</ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <div id="container">
+    <strong>paste vidoe link below</strong>
+   
+    <div class="ion-text-center">
+    <ion-row>
+      <ion-item color="light">
+        <ion-input (ngModelChange)="getValue($event)" [(ngModel)]="videoSource"></ion-input>
+        <ion-button (click)="download()" >download</ion-button>
+      </ion-item>
+    </ion-row>
+
+    <ion-card>
+        <iframe width="500" height="200" #video_link class="m-0 " 
+        src='https://www.youtube.com/embed/Rekc3ikc_og' frameborder="0"></iframe>
+      
+        <!-- https://www.youtube.com/watch?v=Rekc3ikc_og -->
+    </ion-card>
+    </div>
+
+  </div>
+</ion-content>
